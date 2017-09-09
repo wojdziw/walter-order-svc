@@ -7,13 +7,20 @@
   "author": "Jakub Kowalczyk <j.a.kowalczyk1993@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "yarn build/index.js",
-    "build": "tsc"
+    "start": "node build/index.js",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "serve": "nodemon --inspect build/index.js",
+    "develop": "concurrently \"yarn watch\" \"yarn serve\" --names \"tsc,server\"",
+    "clean": "rimraf build"
   },
   "devDependencies": {
     "@types/koa": "^2.0.39",
     "@types/koa-bodyparser": "^3.0.24",
     "@types/koa-router": "^7.0.23",
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.12.0",
+    "rimraf": "^2.6.1",
     "tslint": "^5.7.0",
     "tslint-config-airbnb-base": "^0.1.0",
     "typescript": "^2.5.2"
