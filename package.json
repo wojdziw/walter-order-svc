@@ -1,0 +1,26 @@
+{
+  "name": "OnTheGo-order-svc",
+  "version": "0.1.0",
+  "description": "Real time order service for the OnTheGo app",
+  "main": "build/index.js",
+  "repository": "git@github.com:jakow/OnTheGo-order-svc.git",
+  "author": "Jakub Kowalczyk <j.a.kowalczyk1993@gmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "yarn build/index.js",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.39",
+    "@types/koa-bodyparser": "^3.0.24",
+    "@types/koa-router": "^7.0.23",
+    "tslint": "^5.7.0",
+    "tslint-config-airbnb-base": "^0.1.0",
+    "typescript": "^2.5.2"
+  },
+  "dependencies": {
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.2.1"
+  }
+}
