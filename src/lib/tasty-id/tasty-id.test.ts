@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import 'mocha';
 
-import tastyId from './tasty-id';
+import tastyId from './index';
 
 describe('tastyId()', () => {
   it('generates an readable id in format adjective-noun-id', () => {

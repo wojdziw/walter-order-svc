@@ -4,6 +4,16 @@ export interface Order {
   readableId: string;
   customerId: string;
   items: Item[];
+  status: OrderStatus;
+}
+
+export enum OrderStatus {
+  CREATED,
+  PAID,
+  IN_PROGRESS,
+  FULFILLED,
+  COLLECTED,
+  CLOSED,
 }
 
 export const OrderSchema = {
