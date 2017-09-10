@@ -12,7 +12,9 @@
         "arrow-parens": false,
         "no-consecutive-blank-lines": true,
         "no-magic-numbers": [true, -1, 0, 1, 10],
-        "no-console": [true, "log"]
+        "no-console": [true, "log"],
+        "object-literal-sort-keys": false,
+        "variable-name": [true, "check-format", "allow-pascal-case"]
     },
     "rulesDirectory": []
 }

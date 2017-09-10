@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
         "lib": ["es2015", "es2016", "es2017"],
-        "rootDir": "src",
         "outDir": "build",
         "sourceMap": true,
         "noImplicitAny": true,
@@ -15,9 +14,9 @@
         "downlevelIteration": true
     },
     "exclude": [
-        "node_modules/**/*",
+        "node_modules",
+        "build",
         "src/**/*.test.ts",
-        "src/**/*.spec.ts",
-        "build"
+        "src/**/*.spec.ts"
     ]
 }

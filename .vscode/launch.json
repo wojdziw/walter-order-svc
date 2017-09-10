@@ -5,7 +5,8 @@
         "type": "node",
         "request": "attach",
         "name": "Attach to server",
-        "port": 9229
+        "port": 9229,
+        "restart": true
       },
       {
         "type": "node",
