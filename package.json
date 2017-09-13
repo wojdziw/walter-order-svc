@@ -1,7 +1,7 @@
 {
-  "name": "OnTheGo-order-svc",
+  "name": "walter-order-svc",
   "version": "0.1.0",
-  "description": "Real time order service for the OnTheGo app",
+  "description": "Real time order service for the Walter project",
   "main": "build/index.js",
   "repository": "git@github.com:jakow/OnTheGo-order-svc.git",
   "author": "Jakub Kowalczyk <j.a.kowalczyk1993@gmail.com>",
@@ -15,7 +15,7 @@
     "develop": "concurrently \"yarn watch\" \"yarn serve\" --names \"tsc,server\"",
     "clean": "rimraf build",
     "test": "mocha -r ts-node/register \"src/**/*.test.ts\"",
-    "lint": "tslint -p tsconfig.json",
+    "lint": "tslint --type-check -p tsconfig.json -c tslint.json",
     "precommit": "yarn lint"
   },
   "devDependencies": {
