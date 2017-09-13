@@ -11,9 +11,8 @@ export enum OrderStatus {
   CREATED,
   PAID,
   IN_PROGRESS,
-  FULFILLED,
+  READY,
   COLLECTED,
-  CLOSED,
 }
 
 export const OrderSchema = {
@@ -22,6 +21,13 @@ export const OrderSchema = {
     readableId: { type: 'string' },
     customerId: { type: 'string' },
     items: { type: 'array', items: { type: 'Item' } },
+    status: { type: 'number', enum:  [
+      OrderStatus.CREATED,
+      OrderStatus.PAID,
+      OrderStatus.IN_PROGRESS,
+      OrderStatus.READY,
+      OrderStatus.COLLECTED,
+    ] },
   },
   required: ['readableId', 'customerId'],
   definitions: {
