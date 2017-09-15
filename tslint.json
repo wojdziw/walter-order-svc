@@ -10,7 +10,9 @@
         "interface-name": [true, "never-prefix"],
         "ter-arrow-parens": [true, "always"],
         "arrow-parens": false,
-        "no-consecutive-blank-lines": true
+        "no-consecutive-blank-lines": true,
+        "no-magic-numbers": [true, -1, 0, 1, 10],
+        "no-console": [true, "log"]
     },
     "rulesDirectory": []
 }

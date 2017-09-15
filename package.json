@@ -7,12 +7,15 @@
   "author": "Jakub Kowalczyk <j.a.kowalczyk1993@gmail.com>",
   "private": true,
   "license": "UNLICENSED",
+  "engines": {
+    "node": ">=8.4.0"
+  },
   "scripts": {
     "start": "node build/index.js",
     "build": "tsc",
     "watch": "tsc --watch",
     "serve": "nodemon --inspect build/index.js",
-    "develop": "concurrently \"yarn watch\" \"yarn serve\" --names \"tsc,server\"",
+    "develop": "cross-env NODE_ENV='development' concurrently \"yarn watch\" \"yarn serve\" --names \"tsc,server\"",
     "clean": "rimraf build",
     "test": "mocha -r ts-node/register \"src/**/*.test.ts\"",
     "lint": "tslint --type-check -p tsconfig.json -c tslint.json",
@@ -20,6 +23,7 @@
   },
   "devDependencies": {
     "@types/chai": "^4.0.4",
+    "@types/dotenv": "^4.0.1",
     "@types/koa": "^2.0.39",
     "@types/koa-bodyparser": "^3.0.24",
     "@types/koa-logger": "^2.0.2",
@@ -41,6 +45,8 @@
     "typescript": "^2.5.2"
   },
   "dependencies": {
+    "cross-env": "^5.0.5",
+    "dotenv": "^4.0.0",
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-logger": "^3.0.1",
