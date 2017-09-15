@@ -1,6 +1,9 @@
-import { ValidatorResult } from './validator';
+import { Validator, ValidatorResult } from './validator';
 
-export function createValidator<T>(predicate: (value: T) => boolean, error: string) {
+export function createValidator<T>(
+  predicate: (value: T) => boolean,
+  error: string,
+): Validator<T> {
   return (value: T): ValidatorResult => {
     const isValid = predicate(value);
     if (isValid) {
@@ -10,7 +13,10 @@ export function createValidator<T>(predicate: (value: T) => boolean, error: stri
   };
 }
 
-export function createAsyncValidator<T>(predicate: (value: T) => Promise<boolean>, error: string) {
+export function createAsyncValidator<T>(
+  predicate: (value: T) => Promise<boolean>,
+  error: string,
+): Validator<T> {
   return async (value: T): Promise<ValidatorResult> => {
     const isValid = await predicate(value);
     if (isValid) {
