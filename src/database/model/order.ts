@@ -33,7 +33,7 @@ export const OrderSchema = {
     items: { type: 'array', items: { type: 'Item' } },
     tableNumber: { type: 'number' },
   },
-  required: ['readableId', 'customerId'],
+  required: ['readableId', 'customerId', 'creationDate'],
   definitions: {
     Item: ItemSchema,
   },
