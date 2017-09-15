@@ -3,7 +3,6 @@ export interface Item {
   name: string;
   unitPrice: number;
   quantity: number;
-  totalPrice: number;
 }
 
 export const ItemSchema = {
@@ -13,6 +12,5 @@ export const ItemSchema = {
     name: { type: 'string' },
     unitPrice: { type: 'number' },
     quantity: { type: 'number' },
-    totalPrice: { type: 'number' },
   },
 };
